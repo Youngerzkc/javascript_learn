@@ -1,0 +1,1 @@
+alert("hello beijing ,this is the first station")
