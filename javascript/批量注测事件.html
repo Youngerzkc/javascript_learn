@@ -1,0 +1,27 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="" charset="utf-8" content="">
+    </head>
+    <body>
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <input type="button" name="" value="按钮">
+        <script>
+            //给所有元素绑定点击事件
+            // 1.批量获取
+            var inputs=document.getElementsByTagName("input");//获取到的是伪数组，集合
+            for(var i=0;i<inputs.length;i++) {
+                var input=inputs[i];//里面的每一个元素。
+                // 事件源.事件=function(){事件处理程序}
+                input.onclick=function(){
+                    alert("批量处理开始了！");
+                }
+            }
+        </script>
+    </body>
+</html>
