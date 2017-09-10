@@ -1,0 +1,23 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="" charset="utf-8" content="">
+    </head>
+    <body>
+        <input type="button" id="demo" name="" value="按钮">
+        
+        <script type="text/javascript">
+            // 事件三要素
+            // 1.事件源
+            // 2.事件
+            // 3.事件处理程序
+            // 事件源.事件=function(){事件处理};
+            var demo=document.getElementById("demo");
+            demo.onclick=function(){
+                // alert("已关闭！");
+                console.log(this);
+                // this--->指的是当前元素的对象
+            }
+        </script>
+    </body>
+</html>

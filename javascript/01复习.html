@@ -1,0 +1,26 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="" charset="utf-8" content="">
+    </head>
+    <body>
+        <div id="box" >
+            <div id="son"> </div>
+        </div>
+        <script type="text/javascript">
+        // 获取单个元素
+            var box=document.getElementById("box")
+            var son=document.getElementById("son")
+            //获取批量元素 
+            var divs=document.getElementsByTagName("div")
+            // 页面所有的div
+            var divs=box.getElementsByTagName("div")
+            // box 里面的div
+            // =====================
+            //事件三要素 事件源.事件=function(){事件处理程序}；
+            box.onclick=function(){
+                alert("a")
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="" charset="utf-8" content="">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--onclick里面可以写js代码 这些js代码会在点击之后自动执行-->
+            <img src="images/kity.jpg" alt="" id="demo" onclick="changePic();" >
+            <input type="button" name="" value="按钮">
+            <input type="button" name="" value="按钮">
+            <input type="button" name="" value="按钮">
+        <script type="text/javascript">
+            // 封装改变图片的函数,在onclick里面调用.
+            // 1.要做事，先找人
+            //通过Id获取元素,返回这个元素(这个标签)
+            function changePic(){
+            var demo=document.getElementById("demo");
+               console.log(demo); 
+             //设置src的属性
+             demo.src="images/tiger.jpg"  
+        // 标签位置--->一行一行往下执行的。
+            }
+            //通过标签获取元素
+            //获取页面上所有的input标签
+            // getElementsByTagName--->
+    // 传入要获取的标签名，返回的是一装有元素的集合。
+    document.getElementsByTagName("input")
+
+
+        </script>
+        
+    </body>
+</html>

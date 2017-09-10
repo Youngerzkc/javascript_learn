@@ -1,0 +1,46 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <style>
+        .show{
+            display: block;
+        }
+        .hide{
+            display: none;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+            <img id="img" src="images/kity.jpg" alt="">
+        </div>
+        <!--引用代码封装函数-->
+        <script src="common.js">
+            // 鼠标经过显示，鼠标离开隐藏;
+            // onmouseout--->鼠标离开事件
+            // onmouseover--->鼠标经过事件
+            var img=document.getElementById("img");
+            // img.onmouseover=function(){
+            //     img.className="show";
+            //     img.src="images/taobao.jpg";
+            // }
+            // img.onmouseout=function(){
+            //      img.src="images/taobao.jpg";
+            // }
+            // 类名替换---img.className.replace
+             img.onmouseover=function(){
+                img.className=img.className.replace("hide","show");
+                // img.src="images/taobao.jpg";
+            }
+            img.onmouseout=function(){
+                //  img.className=img.className.replace("show","hide");
+                 // img.src="images/taobao.jpg";
+                 img.className="hide";
+            }
+            // 代码封装，注意
+            function replaceClass(element,oldstr,newStr){
+                element.className=element.className.replace(oldstr,newStr);
+            }
+        </script>
+    </body>
+</html>

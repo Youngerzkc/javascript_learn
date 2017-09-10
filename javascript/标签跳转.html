@@ -1,0 +1,35 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <meta name="" charset="utf-8" content="">
+        <title>Document</title>
+    </head>
+    <body>
+        <!--在onclick里面return false即可阻止跳转-->
+        <!--返回的必须是false其他的东西都不行-->
+        <!--必须把false返回给浏览器才可以-->
+        <a href="http://www.baidu.com"> a跳转标签</a> 
+        <a href="http://www.baidu.com" onclick="return false;" > 阻止跳转 </a>
+        <a href="http://www.baidu.com" onclick="return testAge(17);" >未满18岁禁止进入</a>
+        <a href="http://www.baidu.com" id="demo" >demo </a>
+        <script type="text/javascript">
+            // 标签 事件---标签 onclick="事件处理程序"
+            // 事件源.事件=function(){事件处理程序}
+            var demo=document.getElementById("demo");
+            demo.onclick=function(){
+                // return testAge(16);
+                return false;//返回给浏览器
+            }
+            
+            function testAge(num){
+                if (num>=18){
+                    alert("欢迎使用");
+                }else{
+                    alert("你的年龄未满18岁，无法访问！");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+
+</html>
